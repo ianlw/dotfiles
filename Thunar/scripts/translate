@@ -1,0 +1,6 @@
+#!/bin/bash
+
+trans -I -p -interactive -show-languages no -show-prompt-message no -show-original-phonetics no -show-translation-phonetics no -show-dictionary no -show-translation no -show-original no en:es | lolcat
+
+
+

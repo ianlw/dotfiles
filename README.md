@@ -1,0 +1,13 @@
+# Screenshots
+![system](./src/neofetch-htop.png)
+![htop](./src/htop.png)
+![nvim-workspace](./src/nvim-workspace.png)
+![nvim-slp](./src/nvim-slp.png)
+![nvim-neotree](./src/nvim-neotreee.png)
+![nvim-thunar](./src/thunar-nvim.png)
+![spotify](./src/spotify1.png)
+![spotify](./src/spotify2.png)
+![spotify](./src/spotify3.png)
+![spotify](./src/spotify4.png)
+![spotify](./src/spotify5.png)
+![spotify](./src/spotify6.png)

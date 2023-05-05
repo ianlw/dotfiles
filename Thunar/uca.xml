@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>application-7zip</icon>
+	<name>Unzip</name>
+	<submenu></submenu>
+	<unique-id>1677298318245923-1</unique-id>
+	<command>unzip %n</command>
+	<description>Descomprimir el archivo .zip</description>
+	<range>*</range>
+	<patterns>*.zip</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1677269286826496-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Example for a custom action</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>preferences-desktop-wallpaper</icon>
+	<name>Set as Wallpaper</name>
+	<submenu></submenu>
+	<unique-id>1677298850058515-2</unique-id>
+	<command>feh --bg-scale %n</command>
+	<description>Set a wallpaper</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+</actions>

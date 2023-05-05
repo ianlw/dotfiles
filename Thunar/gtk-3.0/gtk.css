@@ -1,0 +1,147 @@
+*:not(.path-bar-button):not(.rubberband):not(separator) {
+  border: none;
+}
+
+.thunar * statusbar {
+  margin-bottom: 0px;
+}
+
+.thunar location-toolbar {
+  margin-right: 0px;
+  margin-top: 0px;
+}
+.thunar location-toolbar * widget box entry {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.thunar location-toolbar {
+  margin-left: 60px;
+}
+
+.thunar > grid {
+  margin-top: -64px;
+  color: #ffffff
+}
+
+.thunar * statusbar {
+  margin-bottom: 0px;
+}
+
+.thunar {
+  background: rgba(0, 0, 0, 0.479);
+  background-size: 100% 100%;
+}
+
+.thunar .view,
+.thunar widget:not(:selected),
+.thunar .sidebar,
+.thunar .standard-view {
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
+}
+
+.thunar image,
+.thunar widget,
+.thunar label {
+  color: #ffffff8a;
+}
+
+.thunar * .path-bar-button:checked {
+  border-image: radial-gradient(
+      circle closest-corner at center calc(100% - 100px),
+      #fff 100%,
+      transparent 0%
+    )
+    0 0 2/0 0 2px;
+}
+
+.thunar #location-toolbar {
+  margin-top: 0px;
+}
+
+.thunar .sidebar .view {
+  background: rgba(0, 0, 0, 0.185);
+}
+
+.thunar > grid paned {
+  margin-left: -3px;
+}
+
+.thunar > grid paned grid {
+  margin-left: 4px;
+}
+
+/*
+ {
+    font-weight: Bold;
+}
+*/
+.thunar .standard-view,
+.thunar .sidebar {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.thunar paned separator {
+  border-left: 0px solid rgba(0, 0, 0, 0);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.thunar separator {
+  background: rgba(0, 0, 0, 0.2);
+  padding: -10px;
+}
+
+.thunar .sidebar treeview {
+  padding-bottom: 3px;
+  padding-top: 3px;
+  padding-left: 0px;
+}
+
+.thunar .view:not(:selected) {
+  background: rgba(0, 0, 0, 0);
+  color: #ecf0c1;
+}
+/*
+.thunar {
+	background-image: url("/home/ian/Imágenes/arch_red_desenfocado.png");
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center center;
+	background-size: cover;
+}
+*/
+.thunar treeview,
+.thunar .sidebar {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/*thunar sidepane */
+
+window.thunar paned > scrolledwindow treeview.view:selected {
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+border-radius: 10px;
+background: #70aed8;
+}
+
+/*
+window.thunar scrolledwindow.sidebar {
+    border-radius: 10px;
+    background-color: red;
+}
+
+window.thunar scrolledwindow.sidebar treeview.view {
+    background: transparent;
+}
+
+window.thunar scrolledwindow.standard-view {
+    border-radius: 10px;
+    background-color: yellow;
+}
+
+window.thunar scrolledwindow.standard-view widget.view {
+    background: transparent;
+}
+*/

@@ -1,0 +1,45 @@
+
+@theme "/dev/null"
+
+* {
+bg: #0E151D;
+  bgAlt:		#1B1E25;
+  fg:			#05E289;
+background-color: @bg;
+text-color: @fg;
+}
+
+window {
+  transparency:	"real";
+  width:		  61px;
+  height:		  258px;
+  location: east;
+  x-offset: -10px;
+}
+
+mainbox { children: [ listview ]; }
+
+listview {
+    cycle:      true;
+    dynamic:    true;
+    layout:     vertical;
+    /* padding:    10px; */
+}
+
+element {
+  padding:		0px 0px 0px 0px;
+  border-radius:	8px;
+    dynamic:    true;
+}
+
+element-text {
+  margin:		5px 8px 0px 12px;
+  padding:		4px 5px 4px 5px;
+  font:			"feather bold 20";
+  background-color:	inherit;
+  text-color:		inherit; 
+}
+element selected {
+  background-color:	@fg;
+  text-color:		@bgAlt;
+}

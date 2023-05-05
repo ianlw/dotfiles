@@ -1,0 +1,14 @@
+
+* {
+bg: #0E151D;
+bgAlt: #252931e6;
+fg: #ffffff;
+button: #252931;
+background-color: @bg;
+text-color: @fg;
+}
+
+configuration {
+  font: "Cascadia Code 9";
+}
+
