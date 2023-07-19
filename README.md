@@ -14,5 +14,7 @@
 ![spotify](./src/spotify5.png)
 ![spotify](./src/spotify6.png)
 ![scree](./src/screen)
-## lightdm 
+## Lightdm 
 ![lightdm](./src/lightdm-gradiente.gif)
+## Plymouth
+![plymouth](./src/plymouth.gif)
