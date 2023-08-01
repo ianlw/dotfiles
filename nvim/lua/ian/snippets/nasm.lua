@@ -1,0 +1,41 @@
+local date = function() return {os.date('%d-%m-%Y • %H:%M')} end
+local current_file = function() return vim.fn.expand('%:r') end
+
+-- Encabezado con información relevante  
+return {
+    s({trig = "head", dscr = "Encabezado con información relevante"}, {
+        t(";Nombre:         : "), f(current_file, {}), t(".asm"),
+		t({ "", "" }),
+        t(";Propósito:      : "), i(1,"Objetivo del programa"),
+		t({ "", "" }),
+        t(";Autor:          : Ian Quispe"),
+		t({ "", "" }),
+        t(";Creación:       : "),f(date, {}),
+		t({ "", "" }),
+        t(";Modificación:   : "),f(date, {}),
+		t({ "", "" }),
+        t(";Compílación:    : nasm -f elf32 "), f(current_file, {}), t(".asm"),
+		t({ "", "" }),
+        t(";Enlace:         : ld -m elf_i386 -o "), f(current_file, {}), t(" "), f(current_file, {}), t(".o io.o"),
+		t({ "", "" }),
+        t(";Ejecución:      : ./"), f(current_file,{}),
+		t({ "", "" }),
+		t({ "", "" }),
+        t("%include 'io.mac'"),
+		t({ "", "" }),
+		t({ "", "" }),
+        t("section .data"),
+		t({ "", "" }),
+        t("    title: db '"), i(1, "Título a mostrar"), t("', 0, 10"),
+		t({ "", "" }),
+		t({ "", "" }),
+        t("section .text"),
+		t({ "", "" }),
+        t("    global _start"),
+		t({ "", "" }),
+		t({ "", "" }),
+        t("_start:"),
+		t({ "", "" }),
+        t("    PutStr title"),
+    }),
+}

@@ -1,4 +1,5 @@
 {
+  "Comment.nvim": { "branch": "master", "commit": "176e85eeb63f1a5970d6b88f1725039d85ca0055" },
   "LuaSnip": { "branch": "master", "commit": "58fbfc627a93281a77f7d161d4ff702e639677b1" },
   "auto-pairs": { "branch": "master", "commit": "39f06b873a8449af8ff6a3eee716d3da14d63a76" },
   "bracey.vim": { "branch": "master", "commit": "4e1a22acc01787814819df1057d039d4ecf357eb" },

@@ -6,6 +6,7 @@ require('ian.core.keymaps-compiler')
 require('ian.core.colors')
 --require('ian.packer-config')
 require('ian.core.colorscheme')
+require('Comment').setup()
 require('ian.plugins.staline')
 require('ian.plugins.neotree')
 require('ian.plugins.lsp')
@@ -15,7 +16,7 @@ require('ian.plugins.floaterm')
 -- require('ian.plugins.zenmode')
 require('ian.plugins.latex-preview')
 -- require('plugins')
-require('ian.plugins.snippets')
+require('ian.plugins.luasnip')
 
 vim.cmd [[luafile /home/ian/.config/nvim/lua/ian/core/colors.lua]] -- Para que funcionen los colores
 
@@ -37,3 +38,4 @@ vim.cmd[[let g:user_emmet_settings={'javascript':{'extends':'jsx'}}]]
 --vim.cmd[[let g:indentLine_fileTypeExclude = ['tex'] ]]
 --vim.cmd[[let g:indentLine_fileTypeExclude = ['md'] ]]
 vim.cmd[[nnoremap gf <C-W>gf]]
+vim.cmd [[ autocmd BufRead,BufNewFile *.asm set filetype=nasm ]] -- latex lsp

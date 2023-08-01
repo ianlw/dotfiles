@@ -45,11 +45,12 @@ require("lazy").setup({
 {
 	"L3MON4D3/LuaSnip",
 	-- follow latest release.
-	version = "<CurrentMajor>.*",
+	version = "2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 	-- install jsregexp (optional!).
-	build = "make install_jsregexp"
+	build = "make install_jsregexp",
+    dependencies = { "rafamadriz/friendly-snippets" }
 },
-    "rafamadriz/friendly-snippets",
+    -- "rafamadriz/friendly-snippets",
     'saadparwaiz1/cmp_luasnip',
 
     'hrsh7th/vim-vsnip-integ',
@@ -65,5 +66,6 @@ require("lazy").setup({
     'hrsh7th/cmp-cmdline',
     'hrsh7th/nvim-cmp',
     'onsails/lspkind.nvim',
-    'nvim-treesitter/nvim-treesitter'
+    'nvim-treesitter/nvim-treesitter',
+    'numToStr/Comment.nvim',
 })
