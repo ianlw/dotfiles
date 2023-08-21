@@ -1,4 +1,4 @@
-<img src="./src/neofetch-htop.png" alt="Linux Fetch" align="right" width="450">
+<img src="./src/neofetch-htop.png" alt="Linux Fetch" align="right" width="450" style="vertical-align:middle">
 
 # Information
 |    Distro    |                                                 [Arch](https://archlinux.org/)                                                  |
