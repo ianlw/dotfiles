@@ -1,5 +1,4 @@
-
-# ℹ Information
+# Information
 <img src="./src/neofetch-htop.png" alt="Linux Fetch" align="right" width="450" style="vertical-align:middle">
 
 |    Distro    |                                                 [Arch](https://archlinux.org/)                                                  |
