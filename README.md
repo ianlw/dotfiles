@@ -24,7 +24,7 @@
 # Spotify
 ![spotify](./src/Franz_Gordon.png)
 
-#Dunst
+# Dunst
 ![dunst](./src/dunst1.gif)
 
 # Lightdm 
