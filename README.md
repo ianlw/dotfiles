@@ -9,13 +9,12 @@
 |     Menu     |                                           [Rofi](https://github.com/davatorium/rofi)                                            |
 |  Compositor  |                         [Picom-animations-git](https://aur.archlinux.org/packages/picom-animations-git)                         |
 |   Terminal   |                                          [Kitty](https://github.com/kovidgoyal/kitty)                                           |
-| Music/Player |                                      [Spotify](https://aur.archlinux.org/packages/spotify)                                      |
+| Music/Player |                   [Spotify](https://aur.archlinux.org/packages/spotify) - [Spicetify](https://spicetify.app/)                   |
 | File Manager |                                  [Thunar](https://archlinux.org/packages/extra/x86_64/thunar/)                                  |
 |    Shell     |                                     [Zsh](https://archlinux.org/packages/extra/x86_64/zsh/)                                     |
 |  Aur Helper  |                                           [Paru](https://github.com/Morganamilo/paru)                                           |
 
 # Screenshots
-%% ![system](./src/neofetch-htop.png)
 ![htop](./src/htop.png)
 # Nvim
 ![nvim-neotree](./src/nvim-neotreee.png)
