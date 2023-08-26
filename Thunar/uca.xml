@@ -11,6 +11,19 @@
 	<patterns>*.zip</patterns>
 	<other-files/>
 </action>
+
+<action>
+	<icon>winrar</icon>
+	<name>Unrar</name>
+	<submenu></submenu>
+	<unique-id>1686198631107368-1</unique-id>
+	<command>unrar x %n</command>
+	<description>Descomprimir el archivo .rar</description>
+	<range>*</range>
+	<patterns>*.rar</patterns>
+	<other-files/>
+</action>
+
 <action>
 	<icon>utilities-terminal</icon>
 	<name>Open Terminal Here</name>
@@ -23,6 +36,7 @@
 	<startup-notify/>
 	<directories/>
 </action>
+
 <action>
 	<icon>preferences-desktop-wallpaper</icon>
 	<name>Set as Wallpaper</name>
