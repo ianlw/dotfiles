@@ -22,7 +22,10 @@
 ![rofi-menu](./src/menurofi.gif)
 
 # Spotify
-![spotify](./src/Franz_Gordon.png.png)
+![spotify](./src/Franz_Gordon.png)
+
+#Dunst
+![dunst](./src/dunst1.gif)
 
 # Lightdm 
 ![lightdm](./src/lightdm-gradiente.gif)
