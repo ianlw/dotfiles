@@ -37,9 +37,9 @@
 #
 
 metadata() {
-    metadata="$(playerctl --player=spotify,harmonoid,cmus,vlc metadata artist 2> /dev/null) - $(playerctl --player=harmonoid,spotify,cmus,edge metadata title 2> /dev/null)"
+    metadata="$(playerctl --player=spotify,mpd,harmonoid,cmus,vlc metadata artist 2> /dev/null) - $(playerctl --player=harmonoid,mpd,spotify,cmus,edge metadata title 2> /dev/null)"
     # echo $metadata
-    status=$(playerctl --player=spotify,harmonoid,cmus,vlc status)
+    status=$(playerctl --player=spotify,mpd,harmonoid,cmus,vlc status)
     case "$status" in
         "Playing")echo "%{F#928596}$1 $metadata%{F-}"
         ;;
@@ -61,6 +61,8 @@ case "$players" in
     *"cmus"*) metadata "󰎄"
     ;;
     *"vlc"*) metadata "󰐹"
+    ;;
+    *"mpd"*) metadata ""
     ;;
     *) echo no music
     ;;
