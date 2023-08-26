@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    -- {'numirias/semshi',run='UpdateRemotePlugins'},
     {'nvim-neo-tree/neo-tree.nvim', branch = "v2.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
@@ -30,7 +31,7 @@ require("lazy").setup({
     'tamton-aquib/staline.nvim',  -- Barra de estado
     'nanozuki/tabby.nvim',
     'ryanoasis/vim-devicons',  --- Iconos
-    'sbdchd/neoformat', -- Formateador de código
+    'sbdchd/neoformat', -- Formateador de código -- Agregar: --style=Microsoft ; a clang-format en .local/share/nvim/lazy/neoformat/autoload/neoformat/formatters/c.vim
     'mattn/emmet-vim', -- snip for html
     'turbio/bracey.vim', --  , {'do': 'npm install --prefix server'} -- live server html, css, javascript
     'junegunn/fzf.vim', -- fzf

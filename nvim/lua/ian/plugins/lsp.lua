@@ -78,10 +78,12 @@ require('lspconfig')['vimls'].setup {
   capabilities = capabilities,
   on_attach = on_attach,
 }
+--[[
 require('lspconfig')['cssls'].setup {
   capabilities = capabilities,
   on_attach = on_attach,
 }
+--]]
 
 ---------------------------
 local border = {

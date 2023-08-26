@@ -9,7 +9,7 @@ vim.cmd[[autocmd FileType cpp map <F11> :w<CR>:split<CR>:term echo "Compilado co
 -- " Para C
 -- "autocmd FileType c map <F12> :split<CR>:term echo "Compilado con GCC";gcc % -o %.bin && echo •••••••••• && echo "\033[0;32m ¡Compilado! \033[0m " && echo •••••••••• && echo && ./%.bin<CR><CR>:resize -6<CR>i
     -- " con la ventana flotante
-vim.cmd[[autocmd FileType c map <F12> :w<CR>:FloatermNew clear; echo "Compilado con GCC"; gcc % -o %.bin && echo •••••••••• && clear && echo "\033[0;32m ¡Compilado! \033[0m " && echo •••••••••• && echo && ./%.bin<CR><CR>]]
+vim.cmd[[autocmd FileType c map <F12> :w<CR>:FloatermNew clear; echo "Compilado con GCC"; gcc % -o %:r -lm && echo •••••••••• && clear && echo "\033[0;32m ¡Compilado! \033[0m " && echo •••••••••• && echo && ./%:r<CR><CR>]]
 
 -- " Para c#
 vim.cmd[[autocmd FileType cs map <F10> :w<CR>:split<CR>:term echo "Compilando...";echo && dotnet run<CR><CR>:resize -6<CR>i]]
