@@ -15,7 +15,7 @@
 |  Aur Helper  |                                           [Paru](https://github.com/Morganamilo/paru)                                           |
 
 # Screenshots
-![system](./src/neofetch-htop.png)
+%% ![system](./src/neofetch-htop.png)
 ![htop](./src/htop.png)
 # Nvim
 ![nvim-neotree](./src/nvim-neotreee.png)
