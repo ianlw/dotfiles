@@ -13,7 +13,7 @@
 |    Shell     |                                     [Zsh](https://archlinux.org/packages/extra/x86_64/zsh/)                                     |
 |  Aur Helper  |                                           [Paru](https://github.com/Morganamilo/paru)                                           |
 
-# [Screenshots](./nvim/README.md)
+# [Screenshots](./nvim/)
 ![htop](./src/htop.png)
 # Nvim
 ![nvim-neotree](./src/nvim-neotreee.png)
