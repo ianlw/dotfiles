@@ -21,7 +21,7 @@
 # Rofi
 ![rofi-menu](./src/menurofi.gif)
 
-# Spotify
+# Spotify - Spicetify (Hazy dark-mono)
 ![spotify](./src/Franz_Gordon.png)
 
 # Dunst
