@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Lobster 
+Icon=lobster
+Exec=nohup /home/ian/lobster.sh
+Terminal=true
