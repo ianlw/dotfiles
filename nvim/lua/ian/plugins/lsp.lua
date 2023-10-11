@@ -78,13 +78,17 @@ require('lspconfig')['vimls'].setup {
   capabilities = capabilities,
   on_attach = on_attach,
 }
+require('lspconfig')['sqlls'].setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  -- root_dir = function() return vim.loop.cwd() end,
+}
 --[[
 require('lspconfig')['cssls'].setup {
   capabilities = capabilities,
   on_attach = on_attach,
 }
 --]]
-
 ---------------------------
 local border = {
       {"╭", "FloatBorder"},

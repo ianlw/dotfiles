@@ -6,7 +6,7 @@ require('ian.core.keymaps-compiler')
 require('ian.core.colors')
 --require('ian.packer-config')
 require('ian.core.colorscheme')
-require('Comment').setup()
+-- require('Comment')
 require('ian.plugins.staline')
 require('ian.plugins.neotree')
 require('ian.plugins.lsp')
@@ -17,6 +17,8 @@ require('ian.plugins.floaterm')
 require('ian.plugins.latex-preview')
 -- require('plugins')
 require('ian.plugins.luasnip')
+-- require('ian.plugins.dadbood.lua')
+require('ian.plugins.neorg')
 
 vim.cmd [[luafile /home/ian/.config/nvim/lua/ian/core/colors.lua]] -- Para que funcionen los colores
 

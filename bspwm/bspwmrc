@@ -15,7 +15,6 @@ google-chrome-stable &
 /usr/lib/kdeconnectd &
 kdeconnect-indicator &
 dunst &
-
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 $HOME/.config/polybar/launch.sh &
@@ -52,7 +51,7 @@ bspc rule -a Steam desktop='IV' state=floating follow=off
 bspc rule -a Alacritty state=floating rectangle=500x200+450+300
 bspc rule -a copyq state=floating
 bspc rule -a Gpaste-ui state=floating center=true rectangle=500x200+450+300
-bspc rule -a mpv state=floating center=true
+bspc rule -a mpv state=floating center=on
 # bspc rule -a translate state=floating rectangle=339x180+0+0
 bspc rule -a translate state=floating rectangle=342x159+528+550
 bspc rule -a traductor state=floating rectangle=342x159+528+550
@@ -61,6 +60,7 @@ bspc rule -a kitty state=tiled
 bspc rule -a Shift-kitty state=floating rectangle= 685x324+328+201
 bspc rule -a Sxiv state=floating
 bspc rule -a robloxplayerlauncher.exe state=floating
+bspc rule -a Puntos state=floating
 
 # Aregalr el cursor 'x'
 xsetroot -cursor_name left_ptr &

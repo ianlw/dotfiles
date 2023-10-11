@@ -1,0 +1,91 @@
+panic: dial tcp [::1]:6600: connect: connection refused
+
+goroutine 1 [running]:
+main.main()
+	/Users/nki/Projects/mpd-mpris/cmd/mpd-mpris/main.go:91 +0x449
+panic: dial tcp [::1]:6600: connect: connection refused
+
+goroutine 1 [running]:
+main.main()
+	/Users/nki/Projects/mpd-mpris/cmd/mpd-mpris/main.go:91 +0x449
+2023/08/23 22:41:43 command 'albumart' failed: No file exists
+2023/08/23 22:41:43 mpd-mpris running
+2023/08/23 22:41:53 Volume changed to 53
+panic: connection to mpd is severed: write tcp 127.0.0.1:52652->127.0.0.1:6600: write: broken pipe
+
+goroutine 7 [running]:
+github.com/natsukagami/mpd-mpris.(*Instance).transformErr(0x0?, {0x63f480, 0xc000333b48})
+	/Users/nki/Projects/mpd-mpris/errors.go:17 +0x234
+github.com/natsukagami/mpd-mpris.(*Status).Update(0xc000204008, 0xc000204000)
+	/Users/nki/Projects/mpd-mpris/player.go:107 +0xc49
+github.com/natsukagami/mpd-mpris.(*Player).createStatus.func1()
+	/Users/nki/Projects/mpd-mpris/player.go:269 +0xc5
+created by github.com/natsukagami/mpd-mpris.(*Player).createStatus
+	/Users/nki/Projects/mpd-mpris/player.go:265 +0x3f4
+panic: dial tcp [::1]:6600: connect: connection refused
+
+goroutine 1 [running]:
+main.main()
+	/Users/nki/Projects/mpd-mpris/cmd/mpd-mpris/main.go:91 +0x449
+2023/08/23 22:44:25 command 'albumart' failed: No file exists
+2023/08/23 22:44:25 mpd-mpris running
+2023/08/23 22:44:28 Volume changed to 53
+2023/08/23 22:44:29 command 'albumart' failed: No file exists
+panic: connection to mpd is severed: write tcp 127.0.0.1:56498->127.0.0.1:6600: write: broken pipe
+
+goroutine 13 [running]:
+github.com/natsukagami/mpd-mpris.(*Instance).transformErr(0x0?, {0x63f480, 0xc000470d08})
+	/Users/nki/Projects/mpd-mpris/errors.go:17 +0x234
+github.com/natsukagami/mpd-mpris.(*Status).Update(0xc0000ac008, 0xc0000ac000)
+	/Users/nki/Projects/mpd-mpris/player.go:107 +0xc49
+github.com/natsukagami/mpd-mpris.(*Player).createStatus.func1()
+	/Users/nki/Projects/mpd-mpris/player.go:269 +0xc5
+created by github.com/natsukagami/mpd-mpris.(*Player).createStatus
+	/Users/nki/Projects/mpd-mpris/player.go:265 +0x3f4
+2023/08/23 22:44:43 command 'albumart' failed: No file exists
+2023/08/23 22:44:43 mpd-mpris running
+2023/08/23 22:44:45 Volume changed to 53
+panic: connection to mpd is severed: write tcp 127.0.0.1:36904->127.0.0.1:6600: write: broken pipe
+
+goroutine 10 [running]:
+github.com/natsukagami/mpd-mpris.(*Instance).transformErr(0x0?, {0x63f480, 0xc0001e7da0})
+	/Users/nki/Projects/mpd-mpris/errors.go:17 +0x234
+github.com/natsukagami/mpd-mpris.(*Status).Update(0xc00012e008, 0xc00012e000)
+	/Users/nki/Projects/mpd-mpris/player.go:107 +0xc49
+github.com/natsukagami/mpd-mpris.(*Player).createStatus.func1()
+	/Users/nki/Projects/mpd-mpris/player.go:269 +0xc5
+created by github.com/natsukagami/mpd-mpris.(*Player).createStatus
+	/Users/nki/Projects/mpd-mpris/player.go:265 +0x3f4
+2023/08/23 22:44:54 command 'albumart' failed: No file exists
+2023/08/23 22:44:54 mpd-mpris running
+2023/08/23 22:44:58 command 'albumart' failed: No file exists
+2023/08/23 22:44:58 Volume changed to 53
+2023/08/23 22:47:52 command 'albumart' failed: No file exists
+panic: connection to mpd is severed: write tcp 127.0.0.1:53294->127.0.0.1:6600: write: broken pipe
+
+goroutine 35 [running]:
+github.com/natsukagami/mpd-mpris.(*Instance).transformErr(0x0?, {0x63f480, 0xc000229b18})
+	/Users/nki/Projects/mpd-mpris/errors.go:17 +0x234
+github.com/natsukagami/mpd-mpris.(*Status).Update(0xc000150008, 0xc000150000)
+	/Users/nki/Projects/mpd-mpris/player.go:107 +0xc49
+github.com/natsukagami/mpd-mpris.(*Player).createStatus.func1()
+	/Users/nki/Projects/mpd-mpris/player.go:269 +0xc5
+created by github.com/natsukagami/mpd-mpris.(*Player).createStatus
+	/Users/nki/Projects/mpd-mpris/player.go:265 +0x3f4
+2023/08/23 22:50:20 command 'albumart' failed: No file exists
+2023/08/23 22:50:20 mpd-mpris running
+2023/08/23 22:50:22 Volume changed to 53
+2023/08/23 22:53:48 command 'albumart' failed: No file exists
+2023/08/23 22:56:33 command 'albumart' failed: No file exists
+2023/08/23 22:59:45 command 'albumart' failed: No file exists
+2023/08/23 23:03:16 command 'albumart' failed: No file exists
+2023/08/23 23:04:36 Play/Pause requested. Switching context...
+2023/08/23 23:04:36 Pause requested
+2023/08/23 23:04:37 Previous requested
+2023/08/23 23:04:37 Next requested
+2023/08/23 23:04:38 Volume changed to 67
+2023/08/23 23:04:39 Volume changed to 52
+2023/08/23 23:04:40 Next requested
+2023/08/23 23:04:40 command 'albumart' failed: No file exists
+2023/08/23 23:04:41 Previous requested
+2023/08/23 23:04:41 command 'albumart' failed: No file exists

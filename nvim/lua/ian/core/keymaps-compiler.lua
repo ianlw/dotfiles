@@ -2,7 +2,7 @@
 -- "map <F12> :!g++ % -o %.bin<CR> <F10>./bin<TAB>
 -- " autocmd FileType cpp map <F12> :split<CR>:term echo "Compilado con G++";g++ % -o %.bin && echo •••••••••• && echo "\033[0;32m ¡Compilado! \033[0m " && echo •••••••••• && echo && ./%.bin<CR><CR>:resize -6<CR>i
     -- " con la ventana flotante
-vim.cmd[[autocmd FileType cpp map <F12> :w<CR>:FloatermNew clear; echo "Compilado con G++"; g++ % -o %.bin && echo •••••••••• && clear && echo "\033[0;32m ¡Compilado! \033[0m " && echo •••••••••• && echo && ./%.bin<CR><CR>]]
+vim.cmd[[autocmd FileType cpp map <F12> :w<CR>:FloatermNew clear; echo "Compilado con G++"; g++ % -o %:r -fopenmp && echo •••••••••• && clear && echo "\033[0;32m ¡Compilado! \033[0m " && echo •••••••••• && echo && ./%:r<CR><CR>]]
 
 -- "Clases de c
 vim.cmd[[autocmd FileType cpp map <F11> :w<CR>:split<CR>:term echo "Compilado con G++";g++ % && echo •••••••••• && echo "\033[0;32m ¡Compilado! \033[0m " && echo •••••••••• && <CR><CR>:resize -6<CR>i]]

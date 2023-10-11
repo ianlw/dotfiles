@@ -1,114 +1,172 @@
+/*****----- Configuration -----*****/
 configuration {
-  modi:			"window,drun,filebrowser";
-  sidebar-mode:		true;
-  show-icons:		false;
-  sort:			true;
-  sorting-method:	"normal";
-  disable-history:	false;
-  scroll-method:	0;
-  drun-display-format:	"{name}";
-  matching:		"fuzzy";
-  window-thumbnail:	true;
-  display-drun:		"Apps";
-  display-window:	"Windows";
-  display-filebrowser:	"Files";
-
-filebrowser {
-  directories-first:	true;
-  sorting-method:	"name";
-  }
+    show-icons:                 true;
+	drun-display-format:        "{name}";
+    sorting-method: "fzf";
 }
-
+/* Importante para que no use algunos colores del tema por defecto */
 @theme "/dev/null"
 
+/*****----- Global Properties -----*****/
 * {
-  bg:		#0C0F09;
-  fg:		#05E289;
-  bgAlt: #1B1E25;
-  button:		#05E289;
-  background-color:	@bg;
-  text-color:		@fg;
+    /* font: "Cartograph CF Bold Italic 10"; */
+    background:     #1E2127FF;
+    background-alt: #282B31FF;
+    foreground:     #FFFFFFFF;
+    selected:       #61AFEFFF;
+    active:         #98C379FF;
+    urgent:         #E06C75FF;
 }
-
-@import "./Themes/style.rasi"
-
-mainbox { children: [ mode-switcher, inputbar, listview ]; }
-
+/*****----- Main Window -----*****/
 window {
-  transparency:		"real";
-  width:		650px;
-  border-radius:	15px;
-  height:		500px;
-  border: 12px;
-  border-color: @bg;
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       800px;
+    height:                      330px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               20px;
+    border-color:                @selected;
+    background-color:            @background;
+    cursor:                      "default";
 }
 
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     20px;
+    margin:                      0px;
+    padding:                     20px;
+    border:                      0px solid;
+    border-radius:               0px 0px 0px 0px;
+    border-color:                @selected;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
 inputbar {
-  children:		[ entry ];
-  expand:		false;
-  padding:		5px 10px 5px 10px;
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            @background;
+    text-color:                  @foreground;
+    children:                    [ "entry" ];
 }
 
-prompt { 
-  enabled: true; 
-  background-color:	@bgAlt;
-  padding:		15px;
-  border-radius:	15px;
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
 }
-
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "::";
+    background-color:            inherit;
+    text-color:                  inherit;
+}
 entry {
-  background-color:	@bgAlt;
-  placeholder:		"Search";
-  expand:		true;
-  padding:		15px;
-  border-radius:	15px;
+    enabled:                     true;
+    font: "Cartograph CF 10";
+    background-color:            inherit;
+    text-color:                  #686E7C;
+    cursor:                      text;
+    placeholder:                 "🎬 Search a movie...";
+    placeholder-color:           inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
 }
 
+/*****----- Listview -----*****/
 listview {
-  columns:		2;
-  cycle:		true;
-  dynamic:		true;
-  layout:		vertical;
-  scrollbar:		false;
+    enabled:                     true;
+    columns:                     4;
+    lines:                       1;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               false;
+    
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+    font: "Cartograph CF Regular 10";
 }
 
+/*****----- Elements -----*****/
 element {
-  orientation:		vertical;
-  margin:		2px 3px 2px 3px;
-  border-radius:	10px;
-  background-color:	@bgAlt;
+    font: "Cartograph CF Italic 10";
+    enabled:                     true;
+    spacing:                     15px;
+    margin:                      0px;
+    padding:                     20px 10px;
+    border:                      0px solid;
+    border-radius:               20px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    orientation:                 vertical;
+    cursor:                      pointer;
 }
-
+element normal.normal {
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+element selected.normal {
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        185px;
+    cursor:                      inherit;
+}
 element-text {
-  expand:		true;
-  margin:		15px 15px 15px 15px;
-  background-color:	inherit;
-  text-color:		inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+    font: "Cartograph CF Italic 10";
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
 }
 
-element selected {
-  background-color:	@fg;
-  text-color:		@bgAlt;
-  border-radius:	10px;
+/*****----- Message -----*****/
+error-message {
+    padding:                     20px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            red / 10%;
+    text-color:                  @foreground;
+}
+textbox {
+    background-color:            transparent;
+    text-color:                  @foreground;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    highlight:                   none;
 }
 
-mode-switcher {
-  spacing:		2px;
-  border-radius:	10px;
-  background-color:	inherit;
-  text-color:		inherit;
-  margin:		10px 50px 10px 50px;
-}
-
-button {
-  padding:		8px;
-  background-color:	@bgAlt;
-  vertical-align:	0.5; 
-  horizontal-align:	0.5;
-}
-
-button selected {
-  padding:		8px;
-  background-color:	@fg;
-  text-color:		@bgAlt;
-}

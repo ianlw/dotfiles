@@ -13,6 +13,41 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- {'numirias/semshi',run='UpdateRemotePlugins'},
+    {
+    "nvim-neorg/neorg",
+    build = ":Neorg sync-parsers",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("neorg").setup {
+        load = {
+          ["core.defaults"] = {}, -- Loads default behaviour
+          ["core.concealer"] = {}, -- Adds pretty icons to your documents
+          ["core.dirman"] = { -- Manages Neorg workspaces
+            config = {
+              workspaces = {
+                notes = "~/notes",
+              },
+            },
+          },
+        },
+      }
+    end,
+  },
+    'nanotee/sqls.nvim',
+    -- Database
+    {
+        "kristijanhusak/vim-dadbod-ui",
+      opt = true,
+      requires = {
+        "tpope/vim-dadbod",
+        "kristijanhusak/vim-dadbod-completion",
+      },
+      config = function()
+        require("ian.plugins.dadbood").setup()
+      end,
+      cmd = { "DBUIToggle", "DBUI", "DBUIAddConnection", "DBUIFindBuffer", "DBUIRenameBuffer", "DBUILastQueryInfo" },
+    },
+
     {'nvim-neo-tree/neo-tree.nvim', branch = "v2.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
@@ -23,10 +58,15 @@ require("lazy").setup({
     "folke/which-key.nvim", --Las opciones de teclas de abajito (atajos de teclado)
     "folke/tokyonight.nvim", -- Theme
     'folke/trouble.nvim', -- Listado de diagnósticos
-    'vimwiki/vimwiki',   -- ------ Marckdown
+    -- 'vimwiki/vimwiki',   -- ------ Marckdown
     'junegunn/goyo.vim', -- ZenMode
     'nvim-telescope/telescope.nvim',   -------- telescope 
-    'jiangmiao/auto-pairs',   --------- Autoclose brackets
+    -- 'jiangmiao/auto-pairs',   --------- Autoclose brackets
+    {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {} -- this is equalent to setup({}) function
+    },
     'christoomey/vim-tmux-navigator',  --- navegavión
     'tamton-aquib/staline.nvim',  -- Barra de estado
     'nanozuki/tabby.nvim',
@@ -38,7 +78,7 @@ require("lazy").setup({
     'voldikss/vim-floaterm', -- Terminal flotante
     'tomtom/tcomment_vim', -- -----Comentarios
     {'rrethy/vim-hexokinase', build = 'make hexokinase' }, -- colores
-    {"iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end,},
+    {"iamcco/markdown-preview.nvim"},
     -- { "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, },
     -- vim snip para lsp texlab (latex)
     -- {'xuhdev/vim-latex-live-preview'},  --, { 'for': 'tex' }  --vim latex preview
