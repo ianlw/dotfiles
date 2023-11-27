@@ -6,13 +6,15 @@ rofi=$(tac $history | rofi -config $roficonfig -dmenu -i)
 [ -z "$rofi" ] && exit
 # $rofi &
 case "$rofi" in
-    "🟣 Jasmine 🎸") streamlink --twitch-disable-ads --title "{author}" --player "mpv --geometry=339x191 --script-opts=osc-layout=slimbox" https://www.twitch.tv/jasminexu007 360p &
+    # "🟣 Jasmine 🎸") streamlink --twitch-disable-ads --title "{author}" --player "mpv --geometry=339x191 --script-opts=osc-layout=slimbox" https://www.twitch.tv/jasminexu007 360p &
+    # "🟣 Jasmine 🎸") mpv --ytdl-format="[height<=480]" --geometry=339x191 "https://www.twitch.tv/jasminexu007" &
+    "🟣 Jasmine 🎸") mpv --ytdl-format="bestvideo+bestaudio/best" --geometry=339x191 "https://www.twitch.tv/jasminexu007" &
     ;;
-    "🟣 Melissa 🎹") streamlink --twitch-disable-ads --title "{author}" --player "mpv --geometry=339x191 --script-opts=osc-layout=slimbox" https://www.twitch.tv/melissalammmusic 360p &
+    "🟣 Melissa 🎹") mpv --ytdl-format="[height<=480]" --geometry=339x191 "https://www.twitch.tv/melissalammmusic" &
     ;;
-    "🟣 Bashbunny 🐇") streamlink --twitch-disable-ads --title "{author}" --player "mpv --geometry=339x191 --script-opts=osc-layout=slimbox" https://www.twitch.tv/bashbunni 360p &
+    "🟣 Bashbunny 🐇") mpv --ytdl-format="bestvideo+bestaudio/best" --geometry=339x191 "https://www.twitch.tv/bashbunni" &
     ;;
-    "🇺🇸 Translate 🇵🇪") kitty --class translate --name translate $HOME/.config/scripts/translate
+    "🇺🇸 Translate 🇵🇪") kitty --config $HOME/.config/kitty/kitty-trans.conf --class translate --name translate $HOME/.config/scripts/translate
     ;;
     "🇵🇪 Traductor 🇺🇸") kitty --class traductor --name traductor $HOME/.config/scripts/traductor
     ;;
