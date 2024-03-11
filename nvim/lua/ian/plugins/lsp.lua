@@ -36,6 +36,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require('lspconfig')['pyright'].setup{
     capabilities = capabilities,
     on_attach = on_attach,
+    root_dir = function() return vim.loop.cwd() end,
 }
 require('lspconfig')['csharp_ls'].setup{
     capabilities = capabilities,
@@ -82,6 +83,11 @@ require('lspconfig')['sqlls'].setup {
   capabilities = capabilities,
   on_attach = on_attach,
   -- root_dir = function() return vim.loop.cwd() end,
+}
+require('lspconfig')['matlab_ls'].setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  root_dir = function() return vim.loop.cwd() end,
 }
 --[[
 require('lspconfig')['cssls'].setup {

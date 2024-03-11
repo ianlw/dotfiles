@@ -16,9 +16,11 @@ require('ian.plugins.floaterm')
 -- require('ian.plugins.zenmode')
 require('ian.plugins.latex-preview')
 -- require('plugins')
-require('ian.plugins.luasnip')
+-- require('ian.plugins.luasnip')
 -- require('ian.plugins.dadbood.lua')
 require('ian.plugins.neorg')
+require('ian.plugins.vimtex')
+require('ian.plugins.rest')
 
 vim.cmd [[luafile /home/ian/.config/nvim/lua/ian/core/colors.lua]] -- Para que funcionen los colores
 
@@ -41,3 +43,11 @@ vim.cmd[[let g:user_emmet_settings={'javascript':{'extends':'jsx'}}]]
 --vim.cmd[[let g:indentLine_fileTypeExclude = ['md'] ]]
 vim.cmd[[nnoremap gf <C-W>gf]]
 vim.cmd [[ autocmd BufRead,BufNewFile *.asm set filetype=nasm ]] -- latex lsp
+vim.cmd [[ autocmd VimEnter * TSEnable highlight ]] -- latex lsp
+
+--vim.cmd([[
+--highlight MySpecialText cterm=bold gui=bold guifg=#ff0000
+--]])
+--vim.cmd([[
+--match MySpecialText /=\zs.*\ze=/
+--]])

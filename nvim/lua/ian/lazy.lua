@@ -13,8 +13,23 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- {'numirias/semshi',run='UpdateRemotePlugins'},
+    --
+    --
+    -- plugins/rest.lua
+    {
+       "rest-nvim/rest.nvim",
+       dependencies = { { "nvim-lua/plenary.nvim" } },
+       config = function()
+         require("rest-nvim").setup({
+           --- Get the same options from Packer setup
+        })
+      end
+    },
+
     {
     "nvim-neorg/neorg",
+    event = "BufEnter *.neorg",
+    ft = "neorg",
     build = ":Neorg sync-parsers",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
@@ -33,8 +48,10 @@ require("lazy").setup({
       }
     end,
   },
-    'nanotee/sqls.nvim',
+
+    -- 'nanotee/sqls.nvim',
     -- Database
+    --[[
     {
         "kristijanhusak/vim-dadbod-ui",
       opt = true,
@@ -47,6 +64,7 @@ require("lazy").setup({
       end,
       cmd = { "DBUIToggle", "DBUI", "DBUIAddConnection", "DBUIFindBuffer", "DBUIRenameBuffer", "DBUILastQueryInfo" },
     },
+    --]]
 
     {'nvim-neo-tree/neo-tree.nvim', branch = "v2.x",
     dependencies = {
@@ -59,7 +77,7 @@ require("lazy").setup({
     "folke/tokyonight.nvim", -- Theme
     'folke/trouble.nvim', -- Listado de diagnósticos
     -- 'vimwiki/vimwiki',   -- ------ Marckdown
-    'junegunn/goyo.vim', -- ZenMode
+    -- 'junegunn/goyo.vim', -- ZenMode
     'nvim-telescope/telescope.nvim',   -------- telescope 
     -- 'jiangmiao/auto-pairs',   --------- Autoclose brackets
     {
@@ -83,6 +101,7 @@ require("lazy").setup({
     -- vim snip para lsp texlab (latex)
     -- {'xuhdev/vim-latex-live-preview'},  --, { 'for': 'tex' }  --vim latex preview
     'hrsh7th/vim-vsnip',
+--[[
 {
 	"L3MON4D3/LuaSnip",
 	-- follow latest release.
@@ -91,7 +110,9 @@ require("lazy").setup({
 	build = "make install_jsregexp",
     dependencies = { "rafamadriz/friendly-snippets" }
 },
-    -- "rafamadriz/friendly-snippets",
+--]]
+    "L3MON4D3/LuaSnip",
+    "rafamadriz/friendly-snippets",
     'saadparwaiz1/cmp_luasnip',
 
     'hrsh7th/vim-vsnip-integ',
@@ -107,6 +128,7 @@ require("lazy").setup({
     'hrsh7th/cmp-cmdline',
     'hrsh7th/nvim-cmp',
     'onsails/lspkind.nvim',
-    'nvim-treesitter/nvim-treesitter',
+    {"nvim-treesitter/nvim-treesitter", build = ":TSEnable highlight"},
+    -- 'nvim-treesitter/nvim-treesitter',
     'numToStr/Comment.nvim',
-})
+},{lazy = true})
