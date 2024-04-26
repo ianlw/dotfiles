@@ -20,7 +20,7 @@ while True:  # Bucle exterior para ejecutar continuamente el programa
         while attempt < MAX_ATTEMPTS:
             try:
                 driver.find_element(By.XPATH, '//*[@id="codigo"]').send_keys('211359')
-                driver.find_element(By.XPATH, '//*[@id="pass"]').send_keys('25771')
+                driver.find_element(By.XPATH, '//*[@id="pass"]').send_keys('*****')
                 captchaImage = driver.find_element(By.XPATH, '//*[@id="imgcap"]')
 
                 captchaImageSave = driver.execute_async_script("""
