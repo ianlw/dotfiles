@@ -12,10 +12,30 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    -- lazy.nvim
+--[[
+{
+  "folke/noice.nvim",
+  event = "VeryLazy",
+  opts = {
+    -- add any options here
+  },
+  dependencies = {
+    -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+    "MunifTanjim/nui.nvim",
+    -- OPTIONAL:
+    --   `nvim-notify` is only needed, if you want to use the notification view.
+    --   If not available, we use `mini` as the fallback
+    "rcarriga/nvim-notify",
+    }
+},
+--]]
     -- {'numirias/semshi',run='UpdateRemotePlugins'},
     --
     --
     -- plugins/rest.lua
+    -- 'mfussenegger/nvim-jdtls',
+    --[[
     {
        "rest-nvim/rest.nvim",
        dependencies = { { "nvim-lua/plenary.nvim" } },
@@ -25,7 +45,9 @@ require("lazy").setup({
         })
       end
     },
+    --]]
 
+  --[[
     {
     "nvim-neorg/neorg",
     event = "BufEnter *.neorg",
@@ -48,6 +70,7 @@ require("lazy").setup({
       }
     end,
   },
+  --]]
 
     -- 'nanotee/sqls.nvim',
     -- Database
@@ -88,10 +111,25 @@ require("lazy").setup({
     'christoomey/vim-tmux-navigator',  --- navegavión
     'tamton-aquib/staline.nvim',  -- Barra de estado
     'nanozuki/tabby.nvim',
-    'ryanoasis/vim-devicons',  --- Iconos
+    {
+      'nanozuki/tabby.nvim',
+      -- event = 'VimEnter', -- if you want lazy load, see below
+      dependencies = 'nvim-tree/nvim-web-devicons',
+    },
     'sbdchd/neoformat', -- Formateador de código -- Agregar: --style=Microsoft ; a clang-format en .local/share/nvim/lazy/neoformat/autoload/neoformat/formatters/c.vim
-    'mattn/emmet-vim', -- snip for html
-    'turbio/bracey.vim', --  , {'do': 'npm install --prefix server'} -- live server html, css, javascript
+{
+  "olrtg/nvim-emmet",
+  config = function()
+    vim.keymap.set({ "n", "v" }, '<leader>xe', require('nvim-emmet').wrap_with_abbreviation)
+  end,
+},
+    -- 'turbio/bracey.vim', --  , {'do': 'npm install --prefix server'} -- live server html, css, javascript
+        {
+        'barrett-ruth/live-server.nvim',
+        build = 'pnpm add -g live-server',
+        cmd = { 'LiveServerStart', 'LiveServerStop' },
+        config = true
+    },
     'junegunn/fzf.vim', -- fzf
     'voldikss/vim-floaterm', -- Terminal flotante
     'tomtom/tcomment_vim', -- -----Comentarios

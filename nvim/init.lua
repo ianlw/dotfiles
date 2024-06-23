@@ -18,19 +18,21 @@ require('ian.plugins.latex-preview')
 -- require('plugins')
 -- require('ian.plugins.luasnip')
 -- require('ian.plugins.dadbood.lua')
-require('ian.plugins.neorg')
+-- require('ian.plugins.neorg')
 require('ian.plugins.vimtex')
-require('ian.plugins.rest')
+-- require('ian.plugins.rest')
+require('ian.plugins.treesitter')
+-- require('ian.plugins.noice')
 
 vim.cmd [[luafile /home/ian/.config/nvim/lua/ian/core/colors.lua]] -- Para que funcionen los colores
 
 -- bracey
-vim.cmd[[let g:bracey_refresh_on_save=1]]
+-- vim.cmd[[let g:bracey_refresh_on_save=1]]
 
 -- emmet
-vim.cmd[[let g:user_emmet_mode='i']]
-vim.cmd[[let g:user_emmet_leader_key=',']]
-vim.cmd[[let g:user_emmet_settings={'javascript':{'extends':'jsx'}}]]
+-- vim.cmd[[let g:user_emmet_mode='i']]
+-- vim.cmd[[let g:user_emmet_leader_key=',']]
+-- vim.cmd[[let g:user_emmet_settings={'javascript':{'extends':'jsx'}}]]
 
 --Identline
 --[[
@@ -41,6 +43,7 @@ vim.cmd[[let g:user_emmet_settings={'javascript':{'extends':'jsx'}}]]
 -- vim.cmd[[let g:indentLine_conceallevel = 2]]
 --vim.cmd[[let g:indentLine_fileTypeExclude = ['tex'] ]]
 --vim.cmd[[let g:indentLine_fileTypeExclude = ['md'] ]]
+--
 vim.cmd[[nnoremap gf <C-W>gf]]
 vim.cmd [[ autocmd BufRead,BufNewFile *.asm set filetype=nasm ]] -- latex lsp
 vim.cmd [[ autocmd VimEnter * TSEnable highlight ]] -- latex lsp
@@ -51,3 +54,4 @@ vim.cmd [[ autocmd VimEnter * TSEnable highlight ]] -- latex lsp
 --vim.cmd([[
 --match MySpecialText /=\zs.*\ze=/
 --]])
+vim.cmd[[set nolazyredraw]]

@@ -2,18 +2,18 @@
 
 #Autostart
 #feh --bg-scale ~/Descargas/background.jpg &
-gummy start &
+# gummy start &
+caffeine start &
 feh --bg-scale /home/ian/Pictures/wallpaper.jpg
-picom &
+pgrep -x picom > /dev/null || picom &
 #spotify &
 nm-applet &
 sudo ntpd -qg &
 #alacritty & 
 #udiskie &
-google-chrome-stable &
+firefox --browser &
 #sh ~/.config/polybar/./launch.sh &
-/usr/lib/kdeconnectd &
-kdeconnect-indicator &
+/usr/lib/kdeconnectd && kdeconnect-indicator &
 dunst &
 pgrep -x sxhkd > /dev/null || sxhkd &
 
@@ -61,6 +61,7 @@ bspc rule -a Shift-kitty state=floating rectangle= 685x324+328+201
 bspc rule -a Sxiv state=floating
 bspc rule -a robloxplayerlauncher.exe state=floating
 bspc rule -a Puntos state=floating
+bspc rule -a main.py state=floating focus=off follow=off
 
 # Aregalr el cursor 'x'
 xsetroot -cursor_name left_ptr &

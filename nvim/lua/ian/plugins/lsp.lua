@@ -64,6 +64,10 @@ require('lspconfig')['html'].setup {
   capabilities = capabilities,
   on_attach = on_attach,
 }
+require('lspconfig')['emmet_language_server'].setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
 require('lspconfig')['tsserver'].setup {
   capabilities = capabilities,
   on_attach = on_attach,
@@ -90,11 +94,16 @@ require('lspconfig')['matlab_ls'].setup {
   root_dir = function() return vim.loop.cwd() end,
 }
 --[[
+require('lspconfig')['jdtls'].setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  root_dir = function() return vim.loop.cwd() end,
+}
+--]]
 require('lspconfig')['cssls'].setup {
   capabilities = capabilities,
   on_attach = on_attach,
 }
---]]
 ---------------------------
 local border = {
       {"╭", "FloatBorder"},
