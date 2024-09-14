@@ -10,6 +10,7 @@
 -- augroup END
 -- ]])
 
+vim.cmd[[autocmd FileType cpp map <leader>a :AssistantToggle <CR> R]]
 vim.cmd[[autocmd FileType html map <F12> :LiveServerStart <CR>]]
     -- " con la ventana flotante
 vim.cmd[[autocmd FileType cpp map <F12> :w<CR>:FloatermNew clear; echo "Compilado con G++"; g++ % -o %:r -fopenmp -lGL -lglut -lGLU -lGLEW && echo •••••••••• && clear && echo "\033[0;32m ¡Compilado! \033[0m " && echo •••••••••• && echo && ./%:r<CR><CR>]]

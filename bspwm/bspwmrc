@@ -13,9 +13,12 @@ sudo ntpd -qg &
 #udiskie &
 firefox --browser &
 #sh ~/.config/polybar/./launch.sh &
-/usr/lib/kdeconnectd && kdeconnect-indicator &
+/usr/lib/kdeconnectd && sleep 1 && kdeconnect-indicator &
 dunst &
 pgrep -x sxhkd > /dev/null || sxhkd &
+# echo "/home/ian/.config/scripts/english_classes.sh" | at 18:30 &
+
+$HOME/.config/scripts/alarm.sh &
 
 $HOME/.config/polybar/launch.sh &
 

@@ -48,7 +48,9 @@ require('lspconfig')['clangd'].setup {
 }
 require('lspconfig')['bashls'].setup {
   capabilities = capabilities,
+    cmd = {"texlab"},
   on_attach = on_attach,
+    filetypes = {"tex", "bib", "sty"},
 }
 require('lspconfig')['texlab'].setup {
   capabilities = capabilities,
@@ -62,13 +64,10 @@ require('lspconfig')['ltex'].setup {
 --]]
 require('lspconfig')['html'].setup {
   capabilities = capabilities,
+    filetypes = { "css", "php","html", "javascript", "blade"},
   on_attach = on_attach,
 }
-require('lspconfig')['emmet_language_server'].setup {
-  capabilities = capabilities,
-  on_attach = on_attach,
-}
-require('lspconfig')['tsserver'].setup {
+require('lspconfig')['ts_ls'].setup {
   capabilities = capabilities,
   on_attach = on_attach,
   -- Para el root directory
@@ -83,8 +82,9 @@ require('lspconfig')['vimls'].setup {
   capabilities = capabilities,
   on_attach = on_attach,
 }
-require('lspconfig')['sqlls'].setup {
+require('lspconfig')['sqls'].setup {
   capabilities = capabilities,
+  root_dir = function() return vim.loop.cwd() end,
   on_attach = on_attach,
   -- root_dir = function() return vim.loop.cwd() end,
 }
@@ -103,6 +103,51 @@ require('lspconfig')['jdtls'].setup {
 require('lspconfig')['cssls'].setup {
   capabilities = capabilities,
   on_attach = on_attach,
+}
+require('lspconfig')['prolog_ls'].setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
+require('lspconfig')['phpactor'].setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
+require('lspconfig')['tailwindcss'].setup {
+  capabilities = capabilities,
+  root_dir = function() return vim.loop.cwd() end,
+  on_attach = on_attach,
+}
+require('lspconfig')['stimulus_ls'].setup {
+  capabilities = capabilities,
+  -- root_dir = function() return vim.loop.cwd() end,
+  on_attach = on_attach,
+}
+require('lspconfig')['emmet_language_server'].setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+    filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact","blade", "php" },
+  -- Read more about this options in the [vscode docs](https://code.visualstudio.com/docs/editor/emmet#_emmet-configuration).
+  -- **Note:** only the options listed in the table are supported.
+  init_options = {
+    ---@type table<string, string>
+    includeLanguages = {},
+    --- @type string[]
+    excludeLanguages = {},
+    --- @type string[]
+    extensionsPath = {},
+    --- @type table<string, any> [Emmet Docs](https://docs.emmet.io/customization/preferences/)
+    preferences = {},
+    --- @type boolean Defaults to `true`
+    showAbbreviationSuggestions = true,
+    --- @type "always" | "never" Defaults to `"always"`
+    showExpandedAbbreviation = "always",
+    --- @type boolean Defaults to `false`
+    showSuggestionsAsSnippets = true,
+    --- @type table<string, any> [Emmet Docs](https://docs.emmet.io/customization/syntax-profiles/)
+    syntaxProfiles = {},
+    --- @type table<string, string> [Emmet Docs](https://docs.emmet.io/customization/snippets/#variables)
+    variables = {},
+  },
 }
 ---------------------------
 local border = {
@@ -174,6 +219,8 @@ vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {
     })
   })
 
+
+  --[[
   -- Set configuration for specific filetype.
   cmp.setup.filetype('gitcommit', {
     sources = cmp.config.sources({
@@ -181,6 +228,16 @@ vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {
     }, {
       { name = 'buffer' },
     })
+  })
+  --]]
+
+
+  -- Set configuration for specific filetype.
+  cmp.setup.filetype({"sql"}, {
+    sources = {
+      { name = 'vim-dadbod-completion' },
+      { name = 'buffer' },
+    },
   })
 
   -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).

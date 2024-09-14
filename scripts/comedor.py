@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 import base64
 import pytesseract
 import time
+from selenium.common.exceptions import NoSuchElementException
 
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
@@ -16,12 +17,24 @@ while True:  # Bucle exterior para ejecutar continuamente el programa
 
         driver = webdriver.Chrome(options=options)
         driver.get("http://bienestar.unsaac.edu.pe/")
+        
+        # Recargar la página dos veces al inicio de cada iteración
+        driver.refresh()
+        time.sleep(0.5)  # Esperar un momento para que la página se recargue
+        driver.refresh()
+        time.sleep(0.5)  # Esperar nuevamente para la segunda recarga
 
         while attempt < MAX_ATTEMPTS:
             try:
                 driver.find_element(By.XPATH, '//*[@id="codigo"]').send_keys('211359')
-                driver.find_element(By.XPATH, '//*[@id="pass"]').send_keys('*****')
-                captchaImage = driver.find_element(By.XPATH, '//*[@id="imgcap"]')
+                driver.find_element(By.XPATH, '//*[@id="pass"]').send_keys('25771')
+
+                try:
+                    captchaImage = driver.find_element(By.XPATH, '//*[@id="imgcap"]')
+                except NoSuchElementException:
+                    print("Captcha no encontrado.")
+                    attempt += 1
+                    continue
 
                 captchaImageSave = driver.execute_async_script("""
                     var ele = arguments[0], callback = arguments[1];
@@ -65,7 +78,11 @@ while True:  # Bucle exterior para ejecutar continuamente el programa
 
         print("Número máximo de intentos alcanzado. Reiniciando el proceso...")
 
+        # Cerrar la ventana del navegador antes de iniciar una nueva iteración
+        driver.quit()
+
     except Exception as e:
         print("Error:", e)
         print("Reintentando...")
         time.sleep(1)
+        driver.quit()
