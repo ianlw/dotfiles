@@ -6,11 +6,17 @@ Atom-for-Firefox by @github/Hann8n
 Brave-Fox by @github/Soft-Bred
 --------------------------------------------------------------------------------- */
 
+
+
+
+/* Abilitar svg color o algo asi en about:config */
+/* readme de ArcFox */
 @import url("icons/icons.css");
-@import url("popup.css");
+@import url("icons/popup.css");
 menupopup {
     border: 0px solid #537398 !important;
 }
+
 
 #urlbar-background {
     border: 1px solid #537398 !important; /* Agrega esta línea para personalizar el borde de la barra de direcciones */
@@ -45,6 +51,15 @@ menupopup {
     -moz-default-appearance: menupopup !important;
     appearance: auto !important;
     background-color: transparent !important;
+    border-radius: 12px !important;
+}
+
+
+
+/* Change text selection background and color in Firefox */
+*::selection {
+    background-color: #C2CAFF !important; /* Selection background color */
+    color: #0F1820 !important; /* Selection text color */
 }
 
 /*--------- Borders -----------*/
@@ -62,33 +77,39 @@ menupopup {
 
 .tabbrowser-tab::after {
     border: 0 !important;
+    border-radius: 12px !important;
     /* border-radius: 12px 12px 12px 12px !important; */
 }
 .titlebar-spacer[type="pre-tabs"] {
     border: 0 !important;
+    border-radius: 12px !important;
     /* border-radius: 12px 12px 12px 12px !important; */
 }
 #navigator-toolbox {
     border: 0 !important;
+    border-radius: 12px !important;
     /* border-radius: 12px 12px 12px 12px !important; */
 }
 
 .titlebar-spacer[type="pre-tabs"] {
     border: 0 !important;
+    border-radius: 12px !important;
     /* border-radius: 12px 12px 12px 12px !important; */
 }
 
 .tabbrowser-tab::after {
     border: 0 !important;
+    border-radius: 12px !important;
     /* border-radius: 12px 12px 12px 12px !important; */
 }
-.tabbrowser-tab {
-    /* border-radius: 10px 10px 0 0 !important; /* Ajusta los valores según tu preferencia */ */
-}
+/* .tabbrowser-tab { */
+/*     /* border-radius: 10px 10px 0 0 !important; /* Ajusta los valores según tu preferencia */ */ */
+/* } */
 
 .tab-background {
     /* border: none !important; */
     border-radius: 10px 10px 10px 10px !important;
+    border-radius: 12px !important;
     /* background: black; */
     /* opacity: .1; */
 }
@@ -101,6 +122,7 @@ menupopup {
 
 #urlbar[open] > .urlbarView > .urlbarView-body-outer > .urlbarView-body-inner {
     border-top: 0 !important;
+    border-radius: 12px !important;
 }
 
 /* Add Transparency | Comment out to remove transparency completely */
@@ -118,6 +140,7 @@ menupopup {
 .tab-background[multiselected="true"] {	
     /* background: rgba(0,0,0,.05) !important; */
     background: transparent !important;
+    border-radius: 12px !important;
     border: 1px solid #537398 !important;
 }
 
@@ -125,6 +148,7 @@ menupopup {
 .tab-background[multiselected="true"] {	
     background: rgba(0, 0, 0, 0.05) !important;
     border: 1px solid #537398 !important;
+    border-radius: 12px !important;
 }
 
 /*--------- Navigation Bar Background -----------*/
@@ -208,7 +232,7 @@ menupopup {
 
 /*--------- Navigation bar Buttons -----------*/
 :root, toolbar {
-    --toolbarbutton-hover-background: rgba(215, 215, 215, 0.09) !important;
+    --toolbarbutton-hover-background: rgba(215, 215, 215, 0.09) !important; 
 }
 
 /* Show Tab close button on hover */
@@ -223,7 +247,8 @@ menupopup {
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
     opacity: 1;
     visibility: visible !important;
-    border-radius: 12px 12px 12px 12px !important;
+    /* border-radius: 12px 12px 12px 12px !important; */
+    border-radius: 12px !important;
 }
 
 /*--------- Brave Icons -----------*/
@@ -277,9 +302,15 @@ menupopup {
 .tabbrowser-tab {
     min-width: 0px !important; 
     /* border-radius: 12px 12px 12px 12px !important; */
+    border-radius: 12px !important;
 }
 .tab-content { 
     overflow: hidden !important;
+    border-radius: 12px !important;
+}
+
+.tab-content:hover {
+    border-radius: 12px !important;
 }
 
 

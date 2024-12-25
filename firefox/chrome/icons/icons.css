@@ -91,7 +91,7 @@ and 11 so applied to both) */
 
 .subviewbutton {
 	-moz-context-properties: fill, fill-opacity !important;
-	fill: currentColor !important;
+	fill: white !important;
 }
 
 :root[fxastatus="not_configured"] #fxa-avatar-image {
@@ -115,6 +115,7 @@ and 11 so applied to both) */
 
 #reload-button {
 	list-style-image: url("reload.svg") !important;
+	fill: #ffffff !important;
 }
 
 #stop-button,
@@ -680,7 +681,8 @@ menupopup > menuitem:is([checked="true"], [selected="true"]) .menu-iconic-icon {
 	background-position: var(--fp-contextmenu-menuitem-padding-inline) center !important;
 	background-repeat: no-repeat !important;
 	-moz-context-properties: fill, fill-opacity !important;
-	fill: currentColor !important;
+	fill: white !important;
+	/* fill: currentColor !important; */
 }
 
 menu>.menu-iconic-text,
@@ -1033,7 +1035,8 @@ menuitem[id="placesContext_new:separator"] {
 	content: "";
 	background: var(--header-image, none) center / 16px no-repeat;
 	-moz-context-properties: fill, fill-opacity;
-	fill: currentColor;
+	/* fill: currentColor; */
+	fill: white !important;
 	padding-inline-start: calc(var(--fp-enabled, 0) * 16px);
 	margin-inline-end: calc(var(--fp-enabled, 0) * 8px);
 }

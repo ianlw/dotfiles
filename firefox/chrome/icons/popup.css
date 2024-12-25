@@ -39,7 +39,7 @@
   --fp-contextmenu-bgcolor: light-dark(Menu, rgb(43 42 51 / 0.95));
 
   --arrowpanel-border-color: var(--fp-contextmenu-bgcolor) !important;
-  --panel-separator-color: rgba(255, 255, 255, 0.1) !important;
+  --panel-separator-color: rgba(255, 255, 255, 0) !important;
   --in-content-page-background: var(--fp-contextmenu-bgcolor) !important;
 }
 
@@ -151,7 +151,7 @@
 
 #appMenu-zoomReduce-button2>.toolbarbutton-icon,
 #appMenu-zoomEnlarge-button2>.toolbarbutton-icon {
-  fill: currentColor !important;
+  fill: #ffffff !important;
   stroke: none !important;
 }
 

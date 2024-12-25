@@ -19,3 +19,8 @@
   }
 }
 
+/* Cambiar la selección de texto en las páginas web */
+*::selection {
+    background-color: #C2CAFF !important; /* Selection background color */
+    color: #0F1820 !important; /* Selection text color */
+}
